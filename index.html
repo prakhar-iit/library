@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Study Library</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo">Library</a>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme">◐</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Study notes</p>
+      <h1>Library</h1>
+      <p class="lead">
+        Notes I keep while studying CS fundamentals, systems and Python, written to be reused.
+        All of them live in the <a href="https://github.com/prakhar-iit/study-notes" target="_blank" rel="noopener">study-notes</a> repo.
+      </p>
+    </section>
+
+    <section class="wrap section">
+      <h2>CS &amp; algorithms</h2>
+      <div class="cards">
+        <a class="card" href="https://github.com/prakhar-iit/study-notes/blob/main/study/cs-interview-teasers.md" target="_blank" rel="noopener">
+          <p class="tag">Systems · Puzzles</p>
+          <h3>CS Interview Teasers</h3>
+          <p>Classic teasers with the problem first and the hint and answer collapsed, so you think before you look.</p>
+          <p class="stack">Big data in small memory · probability · logic puzzles · bit tricks · distributed systems · estimation · data structures</p>
+        </a>
+        <a class="card" href="https://github.com/prakhar-iit/study-notes/blob/main/dsa-leetcode/leetcode_pattern_checklist.md" target="_blank" rel="noopener">
+          <p class="tag">Algorithms</p>
+          <h3>LeetCode Pattern Checklist</h3>
+          <p>Problems grouped by the technique they drill rather than by topic tag, to practise one pattern at a time.</p>
+          <p class="stack">Two pointers · sliding window · trees &amp; graphs · DP · heaps · backtracking · greedy · binary search</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>Python</h2>
+      <div class="cards">
+        <a class="card" href="https://github.com/prakhar-iit/study-notes/blob/main/dsa-leetcode/python_cheatsheet.md" target="_blank" rel="noopener">
+          <p class="tag">Reference</p>
+          <h3>Python Cheatsheet</h3>
+          <p>A single-file reference for coding rounds: core syntax, built-in data structures, stdlib tools and ready-to-use algorithm templates.</p>
+          <p class="stack">collections · heapq · bisect · itertools · algorithm templates</p>
+        </a>
+        <a class="card" href="https://github.com/prakhar-iit/study-notes/blob/main/dsa-leetcode/python_advanced_cheatsheet.md" target="_blank" rel="noopener">
+          <p class="tag">Deep dive</p>
+          <h3>Python Advanced Cheatsheet</h3>
+          <p>Concurrency, internals and the object model, with every runnable example actually executed.</p>
+          <p class="stack">GIL · threading · multiprocessing · asyncio · decorators · generators · memory</p>
+        </a>
+        <a class="card" href="https://github.com/prakhar-iit/study-notes/blob/main/dsa-leetcode/python_flashcards.md" target="_blank" rel="noopener">
+          <p class="tag">Recall</p>
+          <h3>Python Flashcards</h3>
+          <p>Personal recall cards for the things I keep forgetting, including bugs I've actually hit.</p>
+          <p class="stack">Gotchas · algorithm patterns · concurrency · interview talking points</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> Prakhar Rastogi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
